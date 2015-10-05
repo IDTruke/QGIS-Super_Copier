@@ -7,8 +7,8 @@
                               -------------------
         begin                : 2015-09-21
         git sha              : $Format:%H$
-        copyright            : (C) 2015 by HUET Sylvain
-        email                : sylvain.huet@sdis81.fr
+        copyright            : (C) 2015 by IDTruke
+        email                : IDTruke@hotmail.fr
  ***************************************************************************/
 
 /***************************************************************************
@@ -31,8 +31,7 @@ import resources
 from qgis.gui import QgsMessageBar
 from qgis.core import QgsVectorDataProvider, QgsFeature
 # Import the code for the dialog
-from Super_Copier_dialog import Super_CopierDialog
-from Super_Copier_dialog2 import Super_CopierDialog2
+from Super_Copier_dialog import Super_CopierDialog, Super_CopierDialog2
 import os.path
 
 
