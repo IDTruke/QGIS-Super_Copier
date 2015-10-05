@@ -6,8 +6,8 @@
  Copie des objets avec possibilité de personnaliser les champs
                              -------------------
         begin                : 2015-09-21
-        copyright            : (C) 2015 by HUET Sylvain
-        email                : sylvain.huet@sdis81.fr
+        copyright            : (C) 2015 by IDTruke
+        email                : idtruke@hotmail.fr
         git sha              : $Format:%H$
  ***************************************************************************/
 
