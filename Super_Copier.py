@@ -31,8 +31,7 @@ import resources
 from qgis.gui import QgsMessageBar
 from qgis.core import QgsVectorDataProvider, QgsFeature
 # Import the code for the dialog
-from Super_Copier_dialog import Super_CopierDialog
-from Super_Copier_dialog2 import Super_CopierDialog2
+from Super_Copier_dialog import Super_CopierDialog, Super_CopierDialog2
 import os.path
 
 
