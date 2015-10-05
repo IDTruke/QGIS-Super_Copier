@@ -12,7 +12,7 @@ qgisMinimumVersion=2.0
 description=Copie des objets avec possibilité de personnaliser les champs
 version=0.1
 author=IDTruke
-email=IDTruke@hotmail.fr
+email=idtruke@hotmail.fr
 
 about=Permet de lier des champs avec des noms de colonnes différents ou de préremplir un champ.
 
