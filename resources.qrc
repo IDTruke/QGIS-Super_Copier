@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/Super_Copier" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
