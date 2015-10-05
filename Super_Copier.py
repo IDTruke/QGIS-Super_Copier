@@ -7,8 +7,8 @@
                               -------------------
         begin                : 2015-09-21
         git sha              : $Format:%H$
-        copyright            : (C) 2015 by HUET Sylvain
-        email                : sylvain.huet@sdis81.fr
+        copyright            : (C) 2015 by IDTruke
+        email                : idtruke@hotmail.fr.fr
  ***************************************************************************/
 
 /***************************************************************************
