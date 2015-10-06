@@ -35,7 +35,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Enregistrement auto</string>
+    <string>Auto save</string>
    </property>
   </widget>
   <widget class="QComboBox" name="LayerChoice">
@@ -58,7 +58,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Couche de destination :</string>
+    <string>Destination layer</string>
    </property>
   </widget>
   <widget class="QLabel" name="lbl_orig">
@@ -71,7 +71,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Couche active :</string>
+    <string>Active layer</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="Active_Layer">

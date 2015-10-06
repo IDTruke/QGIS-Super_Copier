@@ -52,6 +52,11 @@ class Super_Copier:
         self.plugin_dir = os.path.dirname(__file__)
         # initialize locale
         locale = QSettings().value('locale/userLocale')[0:2]
+        #Multilanguage gestion
+        if locale == u"fr":
+            self.franc = 1
+        else:
+            self.franc = 0
         locale_path = os.path.join(
             self.plugin_dir,
             'i18n',
@@ -196,11 +201,18 @@ class Super_Copier:
         #évite l'erreur du split
         if len(message) < 3 : message = str(message) + "|a_b"
         #choix du message
-        cxMsg = {0 : "Super_Copier : Aucune couche active",
+        if self.franc:
+            cxMsg = {0 : "Super_Copier : Aucune couche active",
                     1 : u"Super_Copier : Aucun objet sélectionné",
                     2 : "Super_Copier : Erreur de type, la couche d'origine est de type " + message.split("|")[1].split("_")[0] + " et la couche de destination de type " + message.split("|")[1].split("_")[1] + "!",
                     3 : "Super_Copier : " + message.split("|")[1],
                     4 : u"Super_Copier : traitement terminé!"}
+        else:
+            cxMsg = {0 : "Super_Copier : no active layer",
+                    1 : u"Super_Copier : no object selected",
+                    2 : "Super_Copier : type error, origin layer is " + message.split("|")[1].split("_")[0] + " and destination layer is " + message.split("|")[1].split("_")[1] + "!",
+                    3 : "Super_Copier : " + message.split("|")[1],
+                    4 : u"Super_Copier : process finished!"}
         msg = msgBar.createMessage( cxMsg[int(message.split("|")[0])] )
         msgBar.pushWidget( msg, cxType[type], 5 )
         
@@ -251,8 +263,12 @@ class Super_Copier:
         selection = l_orig.selectedFeatures()
         """Itération par entité"""
         if l_orig.selectedFeatureCount() < 1: self.msgBarre(2, "1")
-        type1 = {0:"point",1:"ligne",2:"polygone",3:"inconnu", 4:u"aucune géométrie"}
-        type2 = {0:"inconnu",1:"point",2:"ligne",3:"polygone",4:"point",5:"ligne",6:"polygone",7:u"aucune géométrie"}
+        if self.franc :
+            type1 = {0:"point",1:"ligne",2:"polygone",3:"inconnu", 4:u"aucune géométrie"}
+            type2 = {0:"inconnu",1:"point",2:"ligne",3:"polygone",4:"point",5:"ligne",6:"polygone",7:u"aucune géométrie"}
+        else:
+            type1 = {0:"point",1:"line",2:"polygon",3:"unknown", 4:u"no geometry"}
+            type2 = {0:"unknown",1:"point",2:"line",3:"polygon",4:"point",5:"line",6:"polygon",7:u"no geometry"}
         for feature in selection :
             if type1[feature.geometry().type()] == type2[l_dest.wkbType()]:
                 """Création des entités"""
@@ -276,10 +292,14 @@ class Super_Copier:
     def run(self):
         """Run method that performs all the real work"""
         layer_orig = self.iface.activeLayer()
+        print self.franc
         #Write Active layer in LineEdit
         self.dlg.Active_Layer.clear()
-        if str(type(layer_orig)) == "<type 'NoneType'>" :
-            aLayer = 'Aucun calque actif'
+        if str(type(layer_orig)) == "<type 'NoneType'>":
+            if self.franc:
+                aLayer = 'Aucun calque actif'
+            else:
+                aLayer = 'No active layer'
         else :
             aLayer = layer_orig.name()
         self.dlg.Active_Layer.setText(aLayer)
@@ -297,7 +317,7 @@ class Super_Copier:
         # Run the dialog event loop
         result = self.dlg.exec_()
         # See if OK was pressed
-        if result and self.dlg.Active_Layer.text() != 'Aucun calque actif':
+        if result and self.dlg.Active_Layer.text() not in ['No active layer', 'Aucun calque actif']:
             #Destination layer
             layer_dest = self.iface.mapCanvas().layers()[int(self.dlg.LayerChoice.currentText().split("_")[0])]
             #ajout éléments au formulaire
@@ -322,5 +342,5 @@ class Super_Copier:
             else:
                 self.delFieldChoice()
         else:
-            if result and self.dlg.Active_Layer.text() == 'Aucun calque actif':
+            if result and self.dlg.Active_Layer.text() in ['No active layer', 'Aucun calque actif']:
                 self.msgBarre(2, "0")
