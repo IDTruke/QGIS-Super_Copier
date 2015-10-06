@@ -193,7 +193,7 @@ class Super_Copier:
         cxType = {0 : QgsMessageBar.INFO,
                     1 : QgsMessageBar.WARNING,
                     2 : QgsMessageBar.CRITICAL}
-        # Evite l'erreur du split
+        #évite l'erreur du split
         if len(message) < 3 : message = str(message) + "|a_b"
         #choix du message
         cxMsg = {0 : "Super_Copier : Aucune couche active",
@@ -205,6 +205,7 @@ class Super_Copier:
         msgBar.pushWidget( msg, cxType[type], 5 )
         
     def addFieldChoice(self, label, liste, position):
+        """prepare the second dialog box"""
         #add label
         lbl = QtGui.QLabel(label)
         self.dlg_2.gridLayout.addWidget(lbl, position + 2, 0)
@@ -321,5 +322,5 @@ class Super_Copier:
             else:
                 self.delFieldChoice()
         else:
-            if self.dlg.Active_Layer.text() == 'Aucun calque actif':
+            if result and self.dlg.Active_Layer.text() == 'Aucun calque actif':
                 self.msgBarre(2, "0")
