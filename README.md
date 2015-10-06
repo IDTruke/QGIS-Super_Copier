@@ -2,12 +2,11 @@ QGIS-Super\_Copier ![icone](icon.png "Super\_Copier")
 =================
 Plugin QGIS pour choisir les champs lors de la copie de géométries.
 La sélection des couches d'origine et de destination permet de rapprocher les champs communs.
-Dans le cas contraire il y la possibilité de faire le lien entre 2 champs ou d'imposer une valeur.
+Dans le cas contraire il y a la possibilité de faire le lien entre 2 champs ou d'imposer une valeur.
 
-Installation à partir dr github
+Installation à partir de github
 -------------------------------
 
-::
     cd .qgis2/python/plugins/
     git clone https://github.com/IDTruke/QGIS-Super_Copier
 
