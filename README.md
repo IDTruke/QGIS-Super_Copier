@@ -1,25 +1,25 @@
 QGIS-Super\_Copier ![icone](icon.png "Super\_Copier")
 =================
-Plugin QGIS pour choisir les champs lors de la copie de géométries.
-La sélection des couches d'origine et de destination permet de rapprocher les champs communs.
-Dans le cas contraire il y a la possibilité de faire le lien entre 2 champs ou d'imposer une valeur.
+QGIS Plugin to choose the fields when copying geometries.
+The selection of source and destination layers can bring the common fields.
+Otherwise there is the possibility of a link between two fields or to impose a value.
 
-Installation à partir de github
+Installation from github
 -------------------------------
 
     cd .qgis2/python/plugins/
     git clone https://github.com/IDTruke/QGIS-Super_Copier
 
-Utilisation du plugin
+Using the plugin
 ---------------------
 
-* Vérifier que le plugin est activé dans le menu Extension
-* Sélectionner la couche avec les objets à dupliquer
-* Aller dans le menu -> Vecteur -> Super\_Copier -> Super\_Copier
-* Sélectionner la couche de destination dans la première boite de dialogue
+* Ensure the plugin is enabled in the Extension menu
+* Select the layer with the objects to duplicate
+* Go to Vector -> Super\_Copier -> Super\_Copier
+* Select the destination layer in the first dialogue box
 ![Dialog1](img/dialog1.jpg)
-* Cocher l'option 'Enregistrement auto' si vous souhaitez que les modifications soitent directements appliquées
-* Valider
-* Vérifier le lien entre chaque champs dans la seconde boite de dialogue
+* Check the option 'Auto save' if you want the changes to be applied directly from
+* Validate
+* Check the connection between each field in the second dialog box
 ![Dialog2](img/dialog2.jpg)
-* Si vous souhaitez forcer une valeur, remplir le champs 'Valeur forcée'
+* If you want to force a value, fill the fields 'Forced value'
