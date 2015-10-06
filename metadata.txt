@@ -9,12 +9,12 @@
 [general]
 name=Super_Copier
 qgisMinimumVersion=2.0
-description=Copie des objets avec possibilité de personnaliser les champs
+description=Copies objects with ability to customize the value of the field
 version=0.1
 author=IDTruke
 email=idtruke@hotmail.fr
 
-about=Permet de lier des champs avec des noms de colonnes différents ou de préremplir un champ.
+about=Used to bind fields with names of different columns or pre-populate a field.
 
 tracker=https://github.com/IDTruke/QGIS-Super_Copier/issues
 repository=https://github.com/IDTruke/QGIS-Super_Copier
