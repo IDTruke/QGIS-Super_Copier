@@ -17,9 +17,13 @@ Using the plugin
 * Select the layer with the objects to duplicate
 * Go to Vector -> Super\_Copier -> Super\_Copier
 * Select the destination layer in the first dialogue box
+
 ![Dialog1](img/dialog1.jpg)
+
 * Check the option 'Auto save' if you want the changes to be applied directly from
 * Validate
 * Check the connection between each field in the second dialog box
+
 ![Dialog2](img/dialog2.jpg)
+
 * If you want to force a value, fill the fields 'Forced value'
