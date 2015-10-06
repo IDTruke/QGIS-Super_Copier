@@ -17,9 +17,13 @@ Utilisation du plugin
 * Sélectionner la couche avec les objets à dupliquer
 * Aller dans le menu -> Vecteur -> Super\_Copier -> Super\_Copier
 * Sélectionner la couche de destination dans la première boite de dialogue
+
 ![Dialog1](img/dialog1_fr.jpg)
+
 * Cocher l'option 'Enregistrement auto' si vous souhaitez que les modifications soient directements appliquées
 * Valider
 * Vérifier le lien entre chaque champs dans la seconde boite de dialogue
+
 ![Dialog2](img/dialog2_fr.jpg)
+
 * Si vous souhaitez forcer une valeur, remplir le champs 'Valeur forcée'
